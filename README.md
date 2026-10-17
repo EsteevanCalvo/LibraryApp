@@ -107,13 +107,13 @@ dotnet test tests/LibraryLab.Architecture.Tests
 dotnet test tests/LibraryLab.Infrastructure.Tests
 ```
 
-Las pruebas anteriores cubren reglas normales y el modelo relacional. Las cinco pruebas en `LibraryLab.Patterns.Tests` deben fallar mientras el estudiante no resuelva los ejercicios:
+Las pruebas anteriores cubren reglas del dominio, aplicación, API, arquitectura y modelo relacional. En el estado actual de esta rama, las cinco pruebas de `LibraryLab.Patterns.Tests` también pasan:
 
 ```powershell
 dotnet test tests/LibraryLab.Patterns.Tests
 ```
 
-No se omiten, ignoran ni debilitan. Consulta `specs/exercises.md` para ver qué comportamiento observa cada una sin instrucciones de solución.
+Ejecuta las pruebas normales y las de patrones por separado. Consulta `specs/exercises.md` para el alcance de esos ejercicios. Las pruebas HTTP usan repositorios de prueba; por sí solas no prueban una conexión a MySQL real.
 
 Con la API iniciada y conectada a MySQL, ejecuta la verificación de integración real:
 
@@ -123,9 +123,9 @@ powershell -NoProfile -File .\scripts\Verify-LibraryLab.ps1 -ApiBaseUrl http://l
 
 Comprueba registros, consultas, préstamos, devoluciones, conflictos y dos solicitudes concurrentes para el mismo recurso. Crea y conserva registros con prefijo `VERIFY`; úsalo en una base de desarrollo. Las pruebas HTTP de xUnit usan repositorios de prueba y no sustituyen esta comprobación de MySQL.
 
-## Actividad académica
+## Estado de los ejercicios académicos
 
-Factory Method, Builder, Adapter, Decorator y Facade están intencionalmente pendientes. `AGENTS.md`, los `TODO(STUDENT)` y sus pruebas preservan esos límites. No completes esos ejercicios automáticamente.
+En esta rama, Factory Method, Builder, Adapter, Decorator y Facade tienen implementación en Application y sus pruebas automatizadas pasan. Este estado difiere de la plantilla inicial y de las reglas académicas que describen esos contratos como trabajo pendiente. Confirma con el docente que esta versión corresponde a lo permitido para tu entrega; no se deben modificar ni debilitar las pruebas para cambiar su resultado.
 
 ## Especificaciones
 

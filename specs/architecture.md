@@ -19,6 +19,6 @@ La API delega reglas de préstamo y devolución a Application y Domain. El contr
 
 `src/LibraryLab.Domain`, `src/LibraryLab.Application`, `src/LibraryLab.Infrastructure` y `src/LibraryLab.Api` forman la solución. Los proyectos `tests/LibraryLab.*.Tests` separan pruebas normales, de arquitectura y ejercicios académicos.
 
-## Límite pedagógico
+## Ejercicios académicos
 
-Los ejercicios Factory Method, Builder, Adapter, Decorator y Facade son contratos pendientes. El producto base usa flujos ordinarios de dominio y persistencia; no contiene la solución de esos ejercicios. Las suites académicas empiezan en RED por sus `TODO(STUDENT)`.
+En esta rama, Factory Method, Builder, Adapter, Decorator y Facade están implementados en Application. Este estado puede diferir de la plantilla inicial; el alcance permitido para una entrega académica se rige por `AGENTS.md`.
